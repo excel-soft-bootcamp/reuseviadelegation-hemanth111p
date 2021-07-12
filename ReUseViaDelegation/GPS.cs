@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ReUseViaDelegation
 {
-    class Phone:ICommunication
+    class GPS:IGPS
     {
-        public void Hangup() { }
-        public void Release() { }
+        public void Navigate() {
+            Console.WriteLine("Navigation Done");
+        }
     }
 }

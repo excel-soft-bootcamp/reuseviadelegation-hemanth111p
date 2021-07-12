@@ -9,5 +9,6 @@ namespace ReUseViaDelegation
     public interface ICamera
     {
         void Click();
+        
     }
 }

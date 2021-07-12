@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReUseViaDelegation
 {
-    class SmartPhone:ICamera,ICommunication,IGPS
+    class SmartPhone: ICamera,ICommunication, IGPS
     {
         ICamera _cameraRef;
         IGPS _navigateRef;
@@ -25,9 +25,10 @@ namespace ReUseViaDelegation
         {
             this._phoneRef = PhoneRef;
         }
-        public void Click() { this._cameraRef.Click(); }
+        public void Click() {  this._cameraRef.Click();  }
         public void Hangup() { this._phoneRef.Hangup(); }
         public void Release() { this._phoneRef.Release(); }
         public void Navigate() { this._navigateRef.Navigate(); }
+        public void TakePicture() { this.Click(); }
     }
 }

@@ -10,7 +10,13 @@ namespace ReUseViaDelegation
         public class Camera:ICamera
         {
 
-            public void Click() {  }
+            public void Click() {
+            Console.WriteLine("Picture Captured");
+        }
+        public void TakePicture()
+        {
+            this.Click();
+        }
 
         }
 

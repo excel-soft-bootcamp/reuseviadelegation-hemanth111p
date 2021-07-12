@@ -18,12 +18,17 @@ namespace ReUseViaDelegation
             _smartPhone.SetCamera(_camera);
             _smartPhone.SetNavigate(__gps);
             _smartPhone.SetPhone(_phone);
-           
+
+            _smartPhone.TakePicture();
+            _smartPhone.Navigate();
+            _smartPhone.Hangup();
+            _smartPhone.Release();
+
 
             //Substitute Camera with SmartPhone , GPS with SmartPhone , Phone With SamrtPhone
             PhotoGrapher _photoGrapher = new PhotoGrapher();
             _photoGrapher.Capture(_camera);
-            _photoGrapher.Capture(_smartPhone);
+           _photoGrapher.Capture(_smartPhone);
 
             Traveller traveller = new Traveller();
             traveller.Hike(__gps);

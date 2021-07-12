@@ -12,6 +12,7 @@ namespace ReUseViaDelegation
         {
             
             _camera.Click();
+            
         }
     }
 }
